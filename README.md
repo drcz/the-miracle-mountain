@@ -7,6 +7,7 @@ As an art director I am more than pleased with the result; as a programmer I rem
 Its premiere was on International Workers' Day, here: http://chuj.co.nf/cudowna-gora/run.html 
 
 I made two advertisements in case the tv was interested:
+
 https://vine.co/v/ezzn6V0VUrm
 https://vine.co/v/eWKOUaMrted
 
