@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <title>degelen editor</title>
+  </head>
+  <body style='background-color:#fff; font-face: arial; font-size: 13px; color:#000;'>
+    <br/><br/>
+    current signature: <input id='signature' value='--' size='136' />
+    position: <span id='position'>(,) center (5,5)</span>
+    <br/>
+    <strong>
+    = <span id='fullsign'>...</span>
+    </strong>
+    <hr/>
+    <center>
+      <table>
+	<tr>
+	  <td><div id = 'selWALL'><img src='img/kafel-49.png' onclick='set_signature("\"type\":\"null\"");'></div></td>
+	</tr>
+
+<tr>
+<!--
+<td><div id = 'selHERO'><img src='img/kafel-1g.png' onclick='set_signature("\"type\":\"HERO\"");'></div></td>
+<td><div id = 'selHERO'><img src='img/kafel-1d.png' onclick='set_signature("\"type\":\"HERO\"");'></div></td>
+<td><div id = 'selHERO'><img src='img/kafel-1l.png' onclick='set_signature("\"type\":\"HERO\"");'></div></td>
+<td><div id = 'selHERO'><img src='img/kafel-1p.png' onclick='set_signature("\"type\":\"HERO\"");'></div></td>
+-->
+
+<td><div id = 'selBARRELv'><img src='img/kafel-2v.png' onclick='set_signature("\"type\":\"BARREL\", \"facing\":\"v\"");'></div></td>
+<td><div id = 'selBARRELh'><img src='img/kafel-2h.png' onclick='set_signature("\"type\":\"BARREL\", \"facing\":\"h\"");'></div></td>
+
+<td><div id = 'selPU'><img src='img/kafel-3.png' onclick='set_signature("\"type\":\"PU\"");'></div></td>
+<!--
+<td><div id = 'selCART_HERO'><img src='img/kafel-4g.png' onclick='set_signature("\"type\":\"CART_HERO\"");'></div></td>
+<td><div id = 'selCART_HERO'><img src='img/kafel-4d.png' onclick='set_signature("\"type\":\"CART_HERO\"");'></div></td>
+<td><div id = 'selCART_HERO'><img src='img/kafel-4l.png' onclick='set_signature("\"type\":\"CART_HERO\"");'></div></td>
+<td><div id = 'selCART_HERO'><img src='img/kafel-4p.png' onclick='set_signature("\"type\":\"CART_HERO\"");'></div></td>
+-->
+
+<td><div id = 'selGUN'><img src='img/kafel-5g.png' onclick='set_signature("\"type\":\"GUN\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selGUN'><img src='img/kafel-5d.png' onclick='set_signature("\"type\":\"GUN\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selGUN'><img src='img/kafel-5l.png' onclick='set_signature("\"type\":\"GUN\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selGUN'><img src='img/kafel-5p.png' onclick='set_signature("\"type\":\"GUN\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selEXTINGUISHER'><img src='img/kafel-6.png' onclick='set_signature("\"type\":\"EXTINGUISHER\"");'></div></td>
+<td><div id = 'selSUIT'><img src='img/kafel-7.png' onclick='set_signature("\"type\":\"SUIT\"");'></div></td>
+<td><div id = 'selFUSE'><img src='img/kafel-14.png' onclick='set_signature("\"type\":\"FUSE\"");'></div></td>
+<td><div id = 'selKEY'><img src='img/kafel-26.png' onclick='set_signature("\"type\":\"KEY\"");'></div></td>
+
+<td><div id = 'selMIRROR'><img src='img/kafel-8l.png' onclick='set_signature("\"type\":\"MIRROR\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selMIRROR'><img src='img/kafel-8r.png' onclick='set_signature("\"type\":\"MIRROR\", \"facing\":\"r\"");'></div></td>
+<!--
+<td><div id = 'selHERO_SUIT'><img src='img/kafel-9g.png' onclick='set_signature("\"type\":\"HERO_SUIT\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selHERO_SUIT'><img src='img/kafel-9d.png' onclick='set_signature("\"type\":\"HERO_SUIT\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selHERO_SUIT'><img src='img/kafel-9l.png' onclick='set_signature("\"type\":\"HERO_SUIT\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selHERO_SUIT'><img src='img/kafel-9p.png' onclick='set_signature("\"type\":\"HERO_SUIT\", \"facing\":\"r\"");'></div></td>
+-->
+
+<td><div id = 'selDETONATOR'><img src='img/kafel-34.png' onclick='set_signature("\"type\":\"DETONATOR\"");'></div></td>
+
+<td><div id = 'selGASBULLET'><img src='img/kafel-10.png' onclick='set_signature("\"type\":\"GASBULLET\"");'></div></td>
+<td><div id = 'selROBOT'><img src='img/kafel-11g.png' onclick='set_signature("\"type\":\"ROBOT\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selROBOT'><img src='img/kafel-11d.png' onclick='set_signature("\"type\":\"ROBOT\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selROBOT'><img src='img/kafel-11l.png' onclick='set_signature("\"type\":\"ROBOT\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selROBOT'><img src='img/kafel-11p.png' onclick='set_signature("\"type\":\"ROBOT\", \"facing\":\"r\"");'></div></td>
+<!--
+<td><div id = 'selCART_HERO_SUIT'><img src='img/kafel-12g.png' onclick='set_signature("\"type\":\"CART_HERO_SUIT\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selCART_HERO_SUIT'><img src='img/kafel-12d.png' onclick='set_signature("\"type\":\"CART_HERO_SUIT\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selCART_HERO_SUIT'><img src='img/kafel-12l.png' onclick='set_signature("\"type\":\"CART_HERO_SUIT\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selCART_HERO_SUIT'><img src='img/kafel-12p.png' onclick='set_signature("\"type\":\"CART_HERO_SUIT\", \"facing\":\"r\"");'></div></td>
+-->
+<td><div id = 'selPARTICLE'><img src='img/kafel-13.png' onclick='set_signature("\"type\":\"PARTICLE\"");'></div></td>
+<td><div id = 'selBOOM'><img src='img/kafel-21.png' onclick='set_signature("\"type\":\"BOOM\"");'></div></td>
+<td><div id = 'selFIRE'><img src='img/kafel-29.png' onclick='set_signature("\"type\":\"FIRE\"");'></div></td>
+<td><div id = 'selWATER'><img src='img/kafel-30.png' onclick='set_signature("\"type\":\"WATER\"");'></div></td>
+</tr><tr>
+<td><div id = 'selHOLDER'><img src='img/kafel-15l.png' onclick='set_signature("\"type\":\"HOLDER\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selHOLDER'><img src='img/kafel-15p.png' onclick='set_signature("\"type\":\"HOLDER\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selHOLDER'><img src='img/kafel-15g.png' onclick='set_signature("\"type\":\"HOLDER\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selHOLDER'><img src='img/kafel-15d.png' onclick='set_signature("\"type\":\"HOLDER\", \"facing\":\"d\"");'></div></td>
+
+<td><div id = 'selEXIT'><img src='img/kafel-16.png' onclick='set_signature("\"type\":\"EXIT\"");'></div></td>
+<td><div id = 'selWALL'><img src='img/kafel-17l.png' onclick='set_signature("\"type\":\"WALL\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selWALL'><img src='img/kafel-17p.png' onclick='set_signature("\"type\":\"WALL\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selWALL'><img src='img/kafel-17d.png' onclick='set_signature("\"type\":\"WALL\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selWALL'><img src='img/kafel-17g.png' onclick='set_signature("\"type\":\"WALL\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selDOOR'><img src='img/kafel-18.png' onclick='set_signature("\"type\":\"DOOR\"");'></div></td>
+<td><div id = 'selJOYSTICK'><img src='img/kafel-19.png' onclick='set_signature("\"type\":\"JOYSTICK\"");'></div></td>
+<td><div id = 'selCART_BOMB'><img src='img/kafel-20g.png' onclick='set_signature("\"type\":\"CART_BOMB\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selCART_BOMB'><img src='img/kafel-20d.png' onclick='set_signature("\"type\":\"CART_BOMB\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selCART_BOMB'><img src='img/kafel-20l.png' onclick='set_signature("\"type\":\"CART_BOMB\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selCART_BOMB'><img src='img/kafel-20p.png' onclick='set_signature("\"type\":\"CART_BOMB\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selMACHINEl'><img src='img/kafel-22l.png' onclick='set_signature("\"type\":\"MACHINE\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selMACHINEr'><img src='img/kafel-22p.png' onclick='set_signature("\"type\":\"MACHINE\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selMACHINEd'><img src='img/kafel-22d.png' onclick='set_signature("\"type\":\"MACHINE\", \"facing\":\"d\"");'></div></td>
+
+<td><div id = 'selBOMB_A'><img src='img/kafel-23.png' onclick='set_signature("\"type\":\"BOMB_A\"");'></div></td>
+<td><div id = 'selBOMB_H'><img src='img/kafel-24.png' onclick='set_signature("\"type\":\"BOMB_H\"");'></div></td>
+
+<td><div id = 'selWALL2r'><img src='img/kafel-25p.png' onclick='set_signature("\"type\":\"WALL2\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selWALL2l'><img src='img/kafel-25l.png' onclick='set_signature("\"type\":\"WALL2\", \"facing\":\"l\"");'></div></td>
+</tr><tr>
+
+<td><div id = 'selLEVER'><img src='img/kafel-27l.png' onclick='set_signature("\"type\":\"LEVER\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selLEVER'><img src='img/kafel-27p.png' onclick='set_signature("\"type\":\"LEVER\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selCART_PU'><img src='img/kafel-28g.png' onclick='set_signature("\"type\":\"CART_PU\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selCART_PU'><img src='img/kafel-28d.png' onclick='set_signature("\"type\":\"CART_PU\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selCART_PU'><img src='img/kafel-28l.png' onclick='set_signature("\"type\":\"CART_PU\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selCART_PU'><img src='img/kafel-28p.png' onclick='set_signature("\"type\":\"CART_PU\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selANT'><img src='img/kafel-31g.png' onclick='set_signature("\"type\":\"ANT\", \"facing\":\"u\",\"dy\":-1");'></div></td>
+<td><div id = 'selANT'><img src='img/kafel-31d.png' onclick='set_signature("\"type\":\"ANT\", \"facing\":\"d\",\"dy\":1");'></div></td>
+<td><div id = 'selANT'><img src='img/kafel-31l.png' onclick='set_signature("\"type\":\"ANT\", \"facing\":\"l\",\"dx\":-1");'></div></td>
+<td><div id = 'selANT'><img src='img/kafel-31p.png' onclick='set_signature("\"type\":\"ANT\", \"facing\":\"r\",\"dx\":1");'></div></td>
+<td><div id = 'selANT_CORPSE'><img src='img/kafel-32.png' onclick='set_signature("\"type\":\"ANT_CORPSE\"");'></div></td>
+
+<td><div id = 'selROCKS'><img src='img/kafel-33p.png' onclick='set_signature("\"type\":\"ROCKS\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selWALL3'><img src='img/kafel-41p.png' onclick='set_signature("\"type\":\"WALL3\", \"facing\":\"l\"");'></div></td>
+
+</tr><tr>
+<td><div id = 'selTRACKS'><img src='img/kafel-35h.png' onclick='set_signature("\"type\":\"TRACKS\", \"facing\":\"h\"");'></div></td>
+<td><div id = 'selTRACKS'><img src='img/kafel-35v.png' onclick='set_signature("\"type\":\"TRACKS\", \"facing\":\"v\"");'></div></td>
+<td><div id = 'selCART_ROBOT'><img src='img/kafel-36g.png' onclick='set_signature("\"type\":\"CART_ROBOT\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selCART_ROBOT'><img src='img/kafel-36d.png' onclick='set_signature("\"type\":\"CART_ROBOT\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selCART_ROBOT'><img src='img/kafel-36l.png' onclick='set_signature("\"type\":\"CART_ROBOT\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selCART_ROBOT'><img src='img/kafel-36p.png' onclick='set_signature("\"type\":\"CART_ROBOT\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selCRATE'><img src='img/kafel-37h.png' onclick='set_signature("\"type\":\"CRATE\", \"facing\":\"h\"");'></div></td>
+<td><div id = 'selCRATE'><img src='img/kafel-37v.png' onclick='set_signature("\"type\":\"CRATE\", \"facing\":\"v\"");'></div></td>
+
+<td><div id = 'selPIPE-TURN'><img src='img/kafel-38l.png' onclick='set_signature("\"type\":\"PIPE-TURN\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selPIPE-TURN'><img src='img/kafel-38p.png' onclick='set_signature("\"type\":\"PIPE-TURN\", \"facing\":\"r\"");'></div></td>
+<td><div id = 'selPIPE-TURN'><img src='img/kafel-38g.png' onclick='set_signature("\"type\":\"PIPE-TURN\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selPIPE-TURN'><img src='img/kafel-38d.png' onclick='set_signature("\"type\":\"PIPE-TURN\", \"facing\":\"d\"");'></div></td>
+
+<td><div id = 'selANT2'><img src='img/kafel-39g.png' onclick='set_signature("\"type\":\"ANT2\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selANT2'><img src='img/kafel-39d.png' onclick='set_signature("\"type\":\"ANT2\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selANT2'><img src='img/kafel-39l.png' onclick='set_signature("\"type\":\"ANT2\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selANT2'><img src='img/kafel-39p.png' onclick='set_signature("\"type\":\"ANT2\", \"facing\":\"r\"");'></div></td>
+
+<td><div id = 'selBOMB_METER'><img src='img/kafel-40l.png' onclick='set_signature("\"type\":\"BOMB_METER\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selBOMB_METER'><img src='img/kafel-40p.png' onclick='set_signature("\"type\":\"BOMB_METER\", \"facing\":\"r\"");'></div></td>
+
+<td><div id = 'selBOMB'><img src='img/kafel-42.png' onclick='set_signature("\"type\":\"BOMB\"");'></div></td>
+<td></td>
+</tr><tr>
+<td><div id = 'selCART_EMPTY'><img src='img/kafel-44g.png' onclick='set_signature("\"type\":\"CART_EMPTY\", \"facing\":\"u\"");'></div></td>
+<td><div id = 'selCART_EMPTY'><img src='img/kafel-44d.png' onclick='set_signature("\"type\":\"CART_EMPTY\", \"facing\":\"d\"");'></div></td>
+<td><div id = 'selCART_EMPTY'><img src='img/kafel-44l.png' onclick='set_signature("\"type\":\"CART_EMPTY\", \"facing\":\"l\"");'></div></td>
+<td><div id = 'selCART_EMPTY'><img src='img/kafel-44p.png' onclick='set_signature("\"type\":\"CART_EMPTY\", \"facing\":\"r\"");'></div></td>
+
+<td><div id = 'selPIPE'><img src='img/kafel-45h.png' onclick='set_signature("\"type\":\"PIPE\", \"facing\":\"h\"");'></div></td>
+<td><div id = 'selPIPE'><img src='img/kafel-45v.png' onclick='set_signature("\"type\":\"PIPE\", \"facing\":\"v\"");'></div></td>
+
+<td><div id = 'selTURNCOCK'><img src='img/kafel-46h.png' onclick='set_signature("\"type\":\"TURNCOCK\", \"facing\":\"h\"");'></div></td>
+<td><div id = 'selTURNCOCK'><img src='img/kafel-46v.png' onclick='set_signature("\"type\":\"TURNCOCK\", \"facing\":\"v\"");'></div></td>
+
+<td><div id = 'selEGG'><img src='img/kafel-47v.png' onclick='set_signature("\"type\":\"EGG\", \"facing\":\"v\"");'></div></td>
+<td><div id = 'selEGG'><img src='img/kafel-47h.png' onclick='set_signature("\"type\":\"EGG\", \"facing\":\"h\"");'></div></td>
+
+<td><div id = 'selSPANNER'><img src='img/kafel-48.png' onclick='set_signature("\"type\":\"SPANNER\"");'></div></td>
+<td><div id = 'selHOLE'><img src='img/kafel-55.png' onclick='set_signature("\"type\":\"HOLE\"");'></div></td>
+<td><div id = 'selGRASS'><img src='img/kafel-56.png' onclick='set_signature("\"type\":\"GRASS\"");'></div></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+	<tr><td colspan=3><div onclick='show_result("output");'>[SAVE]</div></tr>
+      </table>
+      <br/>
+      <!-- <canvas id='ekraniszcze' width='640' height='480' style='border: 1px solid black;'></canvas> -->
+      <canvas id='ekraniszcze' width='1024' height='512' style='border: 1px solid black;'></canvas>
+    </center>
+    <br/>
+    <hr/>
+    <pre>
+    <div id='output' style='color:black;'></div>
+    </pre>
+    <hr/>
+    <script src="editor.js"></script>
+  </body>
+</html>
