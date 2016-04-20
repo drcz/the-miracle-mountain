@@ -4,7 +4,8 @@ This game I've been working on mostly at nights, on December 2014, February, Mar
 
 As an art director I am more than pleased with the result; as a programmer I remain silent.
 
-Its premiere was on International Workers' Day, here: http://chuj.co.nf/cudowna-gora/run.html 
+Its premiere was on International Workers' Day (original site got removed).
+You can play it here, on gh-pages: http://drcz.github.io/the-miracle-mountaint/
 
 I made two advertisements in case the tv was interested:
 
