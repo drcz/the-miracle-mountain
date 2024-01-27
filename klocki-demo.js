@@ -918,6 +918,7 @@ setInterval(function(){
 	MESSAGES = false;
 	LOAD_LEVEL();
 	SET_flash(10);
+    new Audio('snd/ost.ogg').play()
 	break;
 
     case 'INTRO':
@@ -1071,3 +1072,5 @@ setInterval(function(){
     /// boom done.
 
 },136); //167);
+
+
